@@ -1,0 +1,22 @@
+[
+    {
+        "name": "SQL Injection",
+        "pattern": "(?:' OR '1'='1|SELECT .* FROM .* WHERE|DROP TABLE|INSERT INTO)",
+        "description": "SQL Injection attempt detected"
+    },
+    {
+        "name": "XSS Attack",
+        "pattern": "(?:<script>|<iframe>|javascript:)",
+        "description": "Cross-Site Scripting (XSS) attempt detected"
+    },
+    {
+        "name": "Shell Command Injection",
+        "pattern": "(?:;\\s*\\w+\\s*\\|\\s*\\w+|\\$\\(.*\\))",
+        "description": "Shell command injection detected"
+    },
+    {
+        "name": "Directory Traversal",
+        "pattern": "(?:\\.\\.\\/|\\.\\.\\\\)",
+        "description": "Directory traversal attempt detected"
+    }
+]
